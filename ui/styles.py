@@ -3,14 +3,14 @@
 CUSTOM_CSS = """
 <style>
 :root {
-    --navy: #0B1F3A;
-    --blue: #174A7E;
-    --royal: #2463A6;
-    --gold: #C89B3C;
-    --paper: #F5F7FA;
-    --ink: #172033;
-    --muted: #5E6B7A;
-    --line: #DCE3EB;
+    --navy: #16302A;
+    --blue: #22463C;
+    --royal: #2E5C4E;
+    --gold: #C1703B;
+    --paper: #F6F7F3;
+    --ink: #1B211D;
+    --muted: #5C6B62;
+    --line: #DEE5DD;
     --white: #FFFFFF;
 }
 
@@ -38,7 +38,7 @@ CUSTOM_CSS = """
     color: white;
     border-radius: 18px;
     padding: 1rem 1.25rem;
-    box-shadow: 0 12px 32px rgba(11, 31, 58, 0.18);
+    box-shadow: 0 12px 32px rgba(22, 48, 42, 0.18);
     margin-bottom: 1rem;
 }
 
@@ -89,15 +89,15 @@ CUSTOM_CSS = """
     border-radius: 24px;
     padding: 2.4rem;
     background:
-        radial-gradient(circle at 85% 15%, rgba(200,155,60,0.26), transparent 22%),
-        linear-gradient(135deg, #0B1F3A 0%, #174A7E 58%, #2463A6 100%);
+        radial-gradient(circle at 85% 15%, rgba(193,112,59,0.26), transparent 22%),
+        linear-gradient(135deg, #16302A 0%, #22463C 58%, #2E5C4E 100%);
     color: white;
-    box-shadow: 0 20px 55px rgba(23, 74, 126, 0.22);
+    box-shadow: 0 20px 55px rgba(46, 92, 78, 0.22);
     margin-bottom: 1.2rem;
 }
 
 .hero-kicker {
-    color: #F4D58D;
+    color: #E7B182;
     text-transform: uppercase;
     letter-spacing: 0.13em;
     font-size: 0.76rem;
@@ -122,6 +122,34 @@ CUSTOM_CSS = """
     margin: 0;
 }
 
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-top: 1.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255,255,255,0.16);
+}
+
+.hero-meta-item {
+    min-width: 170px;
+}
+
+.hero-meta-label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 0.2rem;
+}
+
+.hero-meta-value {
+    color: white;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
 .overview-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -134,7 +162,7 @@ CUSTOM_CSS = """
     border: 1px solid var(--line);
     border-radius: 16px;
     padding: 1rem;
-    box-shadow: 0 8px 24px rgba(23,32,51,0.055);
+    box-shadow: 0 8px 24px rgba(27,33,29,0.055);
 }
 
 .overview-number {
@@ -154,7 +182,7 @@ CUSTOM_CSS = """
     border: 1px solid var(--line);
     border-radius: 18px;
     padding: 1.25rem 1.35rem;
-    box-shadow: 0 8px 26px rgba(23,32,51,0.055);
+    box-shadow: 0 8px 26px rgba(27,33,29,0.055);
     margin-bottom: 1rem;
 }
 
@@ -171,8 +199,8 @@ CUSTOM_CSS = """
 
 .research-note {
     border-left: 4px solid var(--gold);
-    background: #FFF9EC;
-    color: #5B4617;
+    background: #FBF1E8;
+    color: #5A3420;
     border-radius: 0 14px 14px 0;
     padding: 0.9rem 1rem;
     margin-bottom: 1rem;
@@ -184,7 +212,7 @@ div[data-testid="stMetric"] {
     border: 1px solid var(--line);
     padding: 1rem;
     border-radius: 16px;
-    box-shadow: 0 7px 20px rgba(23,32,51,0.05);
+    box-shadow: 0 7px 20px rgba(27,33,29,0.05);
 }
 
 div[data-testid="stRadio"] > div {
@@ -206,7 +234,7 @@ div[data-testid="stRadio"] > div {
 .stDownloadButton > button[kind="primary"] {
     background: linear-gradient(135deg, var(--blue), var(--royal));
     color: white;
-    box-shadow: 0 8px 20px rgba(36,99,166,0.22);
+    box-shadow: 0 8px 20px rgba(46,92,78,0.22);
 }
 
 [data-testid="stDataFrame"] {
@@ -260,6 +288,24 @@ HEADER_HERO_HTML = """
         using TOPSIS, tests ranking stability through Sensitivity Analysis, and exports the
         complete results to Excel.
     </p>
+    <div class="hero-meta">
+        <div class="hero-meta-item">
+            <div class="hero-meta-label">Study</div>
+            <div class="hero-meta-value">Decentralized Storage Prioritisation Framework</div>
+        </div>
+        <div class="hero-meta-item">
+            <div class="hero-meta-label">Method</div>
+            <div class="hero-meta-value">AHP pairwise comparison — Saaty 1–9 scale</div>
+        </div>
+        <div class="hero-meta-item">
+            <div class="hero-meta-label">Comparisons</div>
+            <div class="hero-meta-value">10 pairs across 5 criteria</div>
+        </div>
+        <div class="hero-meta-item">
+            <div class="hero-meta-label">Group</div>
+            <div class="hero-meta-value">Saroj · Niraj · Hemant — KIHE</div>
+        </div>
+    </div>
 </div>
 
 <div class="overview-grid">
