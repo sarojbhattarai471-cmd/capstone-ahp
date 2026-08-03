@@ -3,6 +3,20 @@ PRJ701 Capstone Project
 Decentralized Storage Prioritisation using AHP, TOPSIS and Sensitivity Analysis
 """
 
+import os
+import subprocess
+import sys
+
+import streamlit.runtime as _st_runtime
+
+if not _st_runtime.exists():
+    # Launched as a plain script (e.g. an IDE's "Run" button) instead of
+    # `streamlit run` — relaunch under the Streamlit CLI so it always works.
+    subprocess.run(
+        [sys.executable, "-m", "streamlit", "run", os.path.abspath(__file__), *sys.argv[1:]]
+    )
+    sys.exit(0)
+
 import pandas as pd
 import streamlit as st
 
